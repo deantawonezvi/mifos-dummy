@@ -1,0 +1,36 @@
+<ion-content class="layout-background generic">
+    <ion-toolbar class="header">
+        <ion-grid>
+            <ion-row>
+                <ion-title class="title" text-center>
+                    <span text-color="my-custom-color"
+                          class="nav-title">Home</span>
+                </ion-title>
+            </ion-row>
+
+        </ion-grid>
+    </ion-toolbar>
+
+    <ion-grid  class="dead-center general-container register-fields" text-center>
+        <ion-row class="item">
+            <ion-input class="input" [(ngModel)]="account" color="light" type="number"
+                       placeholder="Enter account number" maxlength="25"
+                       required></ion-input>
+        </ion-row>
+        <ion-row class="dropdown-list">
+            <ion-item text-color="light">
+                <ion-label color="light">Select Company</ion-label>
+                <ion-select>
+                    <ion-option value="1">Comapny 1</ion-option>
+                    <ion-option value="2">Comapny 2</ion-option>
+                    <ion-option value="3">Comapny 3</ion-option>
+                    <ion-option value="4">Comapny 4</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-row>
+
+        <ion-row class="item">
+            <button ion-button small block round color="light" class="gb-button" (click)="process()">Continue</button>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,474 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+/* ///////////////////
+  general classes
+                    */
+
+.generic {
+  .scroll-content > .container-padding {
+    padding: 0px 40px;
+  }
+
+  .h2, .h3 {
+    margin: 0 auto !important;
+  }
+
+  .col-center {
+    margin: 0 auto;
+  }
+
+  .no-margin {
+    margin: 0;
+  }
+
+  .no-padding {
+    padding: 0;
+  }
+
+  .no-shadow {
+    box-shadow: none !important;
+  }
+
+  .flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .campton-light {
+    font-family: 'CamptonLight';
+  }
+  .campton-medium {
+    font-family: 'CamptonMedium';
+  }
+
+  .general-hint {
+    font-size:19px;
+    font-family: 'CamptonLight';
+  }
+
+  .nav-title {
+    font-family: 'CamptonMedium';
+    color: map-get($colors, light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .nav-arrow {
+    height: 55px;
+    width: 55px;
+    z-index: 1000;
+    float: left;
+
+    ion-icon {
+      font-size: 25px;
+    }
+  }
+
+  .nav-button {
+    z-index: 1000;
+    margin-left: 20px;
+  }
+
+  .title-bar {
+    margin-top: 45px;
+
+    .toolbar-background {
+      background: transparent;
+      border-bottom-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .navbar {
+    min-height: 121px;
+
+    .toolbar-background {
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/lend-image.png');
+      border-bottom-color: transparent !important;
+      box-shadow: none !important;
+      background-size: cover;
+    }
+  }
+
+  .header {
+    margin-top: 25px;
+
+    .toolbar-background {
+      background-color: map-get($colors, primary);
+      background: transparent;
+      border-bottom-color: transparent !important;
+
+      box-shadow: none !important;
+    }
+
+    span {
+      font-family: 'CamptonMedium';
+      font-size: 16px;
+    }
+  }
+
+  .general-container {
+    width: 80%;
+  }
+
+  .dropdown-list {
+    border-radius: 25px;
+    border: 1px solid #255F8F;
+    width: 100%;
+    margin: 0 auto;
+
+    ion-item {
+      padding-left: 30px;
+      font-size:14px;
+      border-radius: 25px;
+      font-family: 'CamptonLight';
+
+      ion-label, ion-select {
+        &.generic.label, .select-text {
+          color: map-get($colors, secondary);
+        }
+      }
+    }
+  }
+
+  .nav-menu {
+    height: 40px;
+    width:40px;
+  }
+
+  .nav-back-arrow {
+    padding-top: 25px;
+  }
+
+  button {
+    height: 40px;
+    box-shadow: none;
+    font-family: 'CamptonMedium';
+    font-size:14px;
+
+    &.primary {
+      padding: 20px;
+      width:100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      text-transform: none;
+      background: linear-gradient(to right, rgb(39, 96, 142), rgb(39, 96, 142), rgb(39, 96, 142), rgb(58, 149, 222)) !important;
+    }
+
+    &.secondary {
+      height: 35px;
+    }
+  }
+
+  .tg-card {
+    background-color: white;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+
+    ion-row {
+      margin-top: 20px !important;
+
+      &.details {
+        text-align: center;
+        height: 50px;
+        background-color: rgb(235, 235, 235);
+      }
+    }
+
+    ion-icon {
+      font-size: 18px;
+      margin-left: 10px;
+      vertical-align: top;
+
+      &.unset {
+        vertical-align: inherit;
+      }
+    }
+
+    p, .h2, .h3 {
+      font-family: 'CamptonMedium';
+      color: map-get($colors, secondary);
+    }
+
+    .h2 {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .h3 {
+      font-size: 16px;
+      margin-bottom: -10px !important;
+    }
+
+    .text-banner {
+      font-family: 'CamptonMedium' !important;
+      font-size: 16px;
+      background-color: rgba(216, 216, 216, 1) !important;
+      margin: 0;
+      padding-top: 0.1px !important;
+      padding-bottom: 0.1px !important;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      height: 50px;
+    }
+  }
+
+  .slider-container {
+    flex-flow: column;
+
+    ion-range {
+      width: 100%;
+
+      .slider-label {
+        font-family: 'CamptonMedium';
+        font-weight: bold;
+        font-size: 13px;
+        color:#27608E;
+        position: absolute;
+        bottom: -8px;
+
+        &.right {
+          right: 0;
+        }
+
+        &.left {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .input {
+    &.select {
+      border: 1px solid #255F8F;
+      color: #255F8F;
+
+      .label, .select-icon-inner {
+        color: #255F8F;
+      }
+
+      .item-inner {
+        border: 0px;
+      }
+    }
+  }
+
+  .input-date {
+    border: 1px solid white;
+    border-radius: 25px;
+    font-size: 14px;
+    width: 100%;
+    text-align: left;
+    padding-left: 35px;
+  }
+
+  .menu-segment {
+    background: #0096D5;
+    border-radius: 25px;
+
+    .segment-button {
+      color: #FFFFFF;
+      border-radius: 25px;
+      border-color: transparent !important;
+      height: 40px;
+      font-size: 14px;
+
+      &.segment-activated {
+        background: linear-gradient(to right, rgb(39, 96, 142), rgb(39, 96, 142), rgb(39, 96, 142), rgb(9, 132, 177));
+      }
+    }
+  }
+
+  .searchbar {
+    padding: 8px 0px;
+
+    .searchbar-input {
+      border-radius: 25px;
+      box-shadow: none;
+      background-color: rgb(0, 174, 239);
+    }
+  }
+
+  .flat-fields {
+    .input {
+      height: 40px;
+      border-radius: 25px;
+      background-color: rgb(7, 159, 221);
+      padding-left: 20px;
+      color: rgb(39, 96, 142);
+      font-family: "CamptonLight";
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .input-select {
+      height: 40px;
+      border-radius: 25px;
+      background-color: rgb(7, 159, 221);
+      margin-bottom: 10px;
+
+      .label, span, .select-text {
+        color: rgb(39, 96, 142);
+        font-family: "CamptonLight";
+        font-size: 14px;
+      }
+    }
+
+    .text-input::-moz-placeholder {
+      color: rgb(39, 96, 142);
+    }
+
+    .text-input:-ms-input-placeholder {
+      color: rgb(39, 96, 142);
+    }
+
+    .text-input::-webkit-input-placeholder {
+      text-indent: 0;
+      color: rgb(39, 96, 142);
+    }
+  }
+
+  .register-fields {
+    .input {
+      margin-bottom: 10px;
+    }
+
+    .dropdown-list {
+      border-radius: 25px;
+      border: 1px solid white;
+      margin-bottom: 10px;
+
+      .select-text {
+        color: white;
+      }
+
+      .select-icon-inner {
+        color: white;
+      }
+    }
+
+    .datepicker {
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin-bottom: 30px;
+    }
+  }
+
+}
+
+/*
+///////////////////  */
+
+.dead-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+
+.layout-background {
+  background-color: map-get($colors, primary);
+  min-height: 100%;
+}
+
+@font-face {
+  font-family: 'CamptonLight';
+  src: url('../assets/fonts/CamptonLight/fonts/CamptonLight.eot');
+  src: url('../assets/fonts/CamptonLight/fonts/CamptonLight.eot') format('embedded-opentype'),
+  url('../assets/fonts/CamptonLight/fonts/CamptonLight.woff2') format('woff2'),
+  url('../assets/fonts/CamptonLight/fonts/CamptonLight.woff') format('woff'),
+  url('../assets/fonts/CamptonLight/fonts/CamptonLight.ttf') format('truetype'),
+  url('../assets/fonts/CamptonLight/fonts/CamptonLight.svg#CamptonLight') format('svg');
+}
+
+@font-face {
+  font-family: 'CamptonMedium';
+  src: url('../assets/fonts/CamptonMedium/fonts/CamptonMedium.eot');
+  src: url('../assets/fonts/CamptonMedium/fonts/CamptonMedium.eot') format('embedded-opentype'),
+  url('../assets/fonts/CamptonMedium/fonts/CamptonMedium.woff2') format('woff2'),
+  url('../assets/fonts/CamptonMedium/fonts/CamptonMedium.woff') format('woff'),
+  url('../assets/fonts/CamptonMedium/fonts/CamptonMedium.ttf') format('truetype'),
+  url('../assets/fonts/CamptonMedium/fonts/CamptonMedium.svg#CamptonMedium') format('svg');
+}
+
+.gb-text {
+  color: #27608E;
+  font-family: 'CamptonLight', serif;
+  text-transform: capitalize;
+}
+
+.gb-button {
+  color: map_get($colors, primary);
+  font-family: 'CamptonMedium';
+  text-transform: capitalize;
+}
+
+.tabbar {
+  padding-top: 5px;
+}
+
+.flat-fields {
+  .input {
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgb(7, 159, 221);
+    padding-left: 20px;
+    color: rgb(39, 96, 142);
+    font-family: "CamptonLight";
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .input-select {
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgb(7, 159, 221);
+    margin-bottom: 10px;
+
+    .label, span, .select-text {
+      color: rgb(39, 96, 142);
+      font-family: "CamptonLight";
+      font-size: 14px;
+    }
+  }
+
+  .text-input::-moz-placeholder {
+    color: rgb(39, 96, 142);
+  }
+
+  .text-input:-ms-input-placeholder {
+    color: rgb(39, 96, 142);
+  }
+
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: rgb(39, 96, 142);
+  }
+}

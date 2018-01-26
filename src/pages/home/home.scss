@@ -1,0 +1,70 @@
+page-home {
+  .navbar {
+    padding-top: 20px;
+    .toolbar-background {
+      background: transparent;
+      border-bottom-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .displayed {
+    margin: 0 auto;
+    padding-bottom:10px;
+  }
+
+  .vertical-align-content > *
+  {
+    display: flex!important;
+    align-content: center!important;
+    align-items: center!important;
+  }
+
+  .input {
+    border-bottom-color: transparent;
+    border-radius: 25px;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    background-color: transparent;
+    box-shadow: none !important;
+    padding-left: 30px;
+    font-size:14px;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: #FFFFFF;
+  }
+
+  .item {
+    color: #FFFFFF;
+    background-color: transparent;
+    box-shadow: none !important;
+  }
+
+  .title {
+    color: #FFFFFF;
+    background-color: transparent;
+    box-shadow: none !important;
+  }
+
+  .paragraph {
+    color: #FFFFFF;
+    background-color: transparent;
+    box-shadow: none !important;
+  }
+
+  .button{
+    padding: 20px;
+  }
+
+
+  .item-inner, ion-item {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  [text-color="my-custom-color"] {
+    color: #FFFFFF;
+  }
+}
