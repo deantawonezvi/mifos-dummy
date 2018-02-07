@@ -1,0 +1,41 @@
+<ion-content class="layout-background generic">
+  <ion-toolbar class="header">
+    <ion-grid>
+      <ion-row>
+        <button class="nav-arrow" ion-button clear large (click)="endSession()">
+          <ion-icon name="md-arrow-round-back" color="light"></ion-icon>
+        </button>
+        <ion-title style="margin-left: -63px" class="title" text-center>
+                    <span text-color="my-custom-color"
+                          class="nav-title">Client Home</span>
+        </ion-title>
+      </ion-row>
+
+    </ion-grid>
+
+    <ion-card class="tg-card"
+              style="margin-top: 50% !important; width:90% !important;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+      <div class="text-banner flex-center">
+        <p style="font-size: large">{{client.displayName}}</p>
+      </div>
+      <ion-row style="margin-top: 20px;">
+        <ion-grid text-center>
+          <p class="center">
+            {{client.externalId}}
+          </p><br>
+          <p class="center">
+            {{client.mobileNo}}
+          </p>
+        </ion-grid>
+      </ion-row>
+      <ion-row>
+        <button ion-button block small round
+                class="primary no-shadow"
+                (click)="viewLoans()">View Loans
+        </button>
+      </ion-row>
+
+    </ion-card>
+
+  </ion-toolbar>
+</ion-content>
