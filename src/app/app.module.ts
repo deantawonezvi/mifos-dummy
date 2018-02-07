@@ -12,6 +12,10 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {HttpModule} from '@angular/http';
 import {UtilsProvider} from '../providers/utils/utils';
+import {ClientHomePage} from "../pages/client-home/client-home";
+import {LoansViewPage} from "../pages/loans-view/loans-view";
+import {LoanPaymentPage} from "../pages/loan-payment/loan-payment";
+import {InAppBrowser} from "@ionic-native/in-app-browser";
 
 
 @NgModule({
@@ -20,7 +24,10 @@ import {UtilsProvider} from '../providers/utils/utils';
         AboutPage,
         ContactPage,
         HomePage,
-        TabsPage
+        TabsPage,
+        ClientHomePage,
+        LoansViewPage,
+        LoanPaymentPage
     ],
     imports        : [
         HttpModule,
@@ -33,12 +40,16 @@ import {UtilsProvider} from '../providers/utils/utils';
         AboutPage,
         ContactPage,
         HomePage,
-        TabsPage
+        TabsPage,
+        ClientHomePage,
+        LoansViewPage,
+        LoanPaymentPage
     ],
     providers      : [
         UtilsProvider,
         StatusBar,
         SplashScreen,
+        InAppBrowser,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         UtilsProvider
     ]

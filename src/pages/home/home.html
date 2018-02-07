@@ -20,11 +20,8 @@
         <ion-row class="dropdown-list">
             <ion-item text-color="light">
                 <ion-label color="light">Select Company</ion-label>
-                <ion-select>
-                    <ion-option value="1">Comapny 1</ion-option>
-                    <ion-option value="2">Comapny 2</ion-option>
-                    <ion-option value="3">Comapny 3</ion-option>
-                    <ion-option value="4">Comapny 4</ion-option>
+                <ion-select [(ngModel)]="company" >
+                    <ion-option *ngFor="let company of companies" value="{{company.name}}">{{company.name}}</ion-option>
                 </ion-select>
             </ion-item>
         </ion-row>

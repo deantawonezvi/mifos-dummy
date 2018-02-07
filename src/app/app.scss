@@ -168,11 +168,12 @@
 
     &.primary {
       padding: 20px;
-      width:100%;
+      width:80%;
       margin: 0 auto;
       margin-bottom: 30px;
       text-transform: none;
-      background: linear-gradient(to right, rgb(39, 96, 142), rgb(39, 96, 142), rgb(39, 96, 142), rgb(58, 149, 222)) !important;
+      background: map-get($colors, primary);
+
     }
 
     &.secondary {
@@ -211,7 +212,7 @@
 
     p, .h2, .h3 {
       font-family: 'CamptonMedium';
-      color: map-get($colors, secondary);
+      color: map-get($colors, primary);
     }
 
     .h2 {
@@ -428,6 +429,10 @@
   color: map_get($colors, primary);
   font-family: 'CamptonMedium';
   text-transform: capitalize;
+}
+
+.text-color{
+  color: map_get($colors,primary);
 }
 
 .tabbar {

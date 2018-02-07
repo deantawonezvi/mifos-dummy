@@ -1,0 +1,40 @@
+<ion-content class="layout-background generic">
+  <ion-toolbar class="header">
+    <ion-grid>
+      <ion-row>
+        <button class="nav-arrow" ion-button clear large navPop>
+          <ion-icon name="md-arrow-round-back" color="light"></ion-icon>
+        </button>
+        <ion-title style="margin-left: -63px" class="title" text-center>
+                    <span text-color="my-custom-color"
+                          class="nav-title">Loans</span>
+        </ion-title>
+      </ion-row>
+    </ion-grid>
+    <ion-card *ngFor="let loan of loans" class="tg-card"
+              style="=width:90% !important;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+      <ion-row style="margin-top: 20px;">
+        <ion-grid>
+          <p class="h2">
+            {{loan.loanProductName}}
+          </p>
+          <p>
+            Status: {{loan.status.value}}
+          </p>
+          <p>
+            Amount Overdue: {{loan.summary.totalOverdue | currency}}
+          </p>
+        </ion-grid>
+      </ion-row>
+      <ion-row>
+        <button ion-button block small round
+                class="primary no-shadow"
+                (click)="goToPayment(loan)">Pay
+        </button>
+      </ion-row>
+
+    </ion-card>
+
+
+  </ion-toolbar>
+</ion-content>
